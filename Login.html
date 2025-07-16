@@ -3,99 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Login</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <title>Login with CORS Proxy</title>
   <style>
-    body, html {
-      height: 100%;
-      margin: 0;
+    body {
+      background: #000;
+      color: white;
+      font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      background-color: #000;
-      font-family: Arial, sans-serif;
-      color: white;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
     }
-    .login-container {
-      text-align: center;
-      padding: 30px 20px;
-      border-radius: 15px;
-      border: 2px solid #4caf50;
-      background-color: transparent;
-      max-width: 350px;
-      margin-top: 100px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.7);
-      width: 100%;
-    }
-    input[type="text"].code {
-      width: 100%;
-      margin: 10px 0;
-      padding: 15px;
+    input[type=text], input[type=submit] {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
       border: none;
-      border-radius: 10px;
-      background-color: #555;
-      color: white;
-      box-sizing: border-box;
+      width: 250px;
     }
-    input[type="submit"] {
-      width: 100%;
-      padding: 15px;
-      border: none;
-      border-radius: 10px;
-      background-color: #4caf50;
+    input[type=submit] {
+      background: #4caf50;
       color: white;
       cursor: pointer;
     }
-    input[type="submit"]:hover {
-      background-color: #45a049;
-    }
     #err {
+      color: red;
       display: none;
       margin-top: 10px;
-      color: red;
-      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div class="login-container">
-    <h2>Log in</h2>
-    <form id="loginForm">
-      <input type="text" class="code" id="activationCode" placeholder="activation code" required />
-      <div id="err">Error activation code</div>
-      <input type="submit" value="Login" />
-    </form>
-  </div>
+
+  <h2>Login</h2>
+  <form id="loginForm">
+    <input type="text" id="activationCode" placeholder="activation code" required />
+    <input type="submit" value="Login" />
+  </form>
+  <div id="err">Error activation code</div>
 
   <script>
-    document.getElementById("loginForm").addEventListener("submit", function(e) {
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      document.getElementById("err").style.display = "none"; // Hide error on new try
+      document.getElementById('err').style.display = 'none';
 
-      const otp = document.getElementById("activationCode").value.trim();
+      const otp = document.getElementById('activationCode').value.trim();
 
-      fetch("https://page.thanosx.icu/web/otp.php", {
+      // Using public CORS proxy for testing only!
+      const url = "https://cors-anywhere.herokuapp.com/https://page.thanosx.icu/web/otp.php";
+
+      fetch(url, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          // You may need to add more headers if the server requires cookies or auth
+        },
         body: JSON.stringify({ otp: otp })
       })
       .then(res => res.text())
       .then(base64 => {
-        // Check invalid key responses
         if (base64.trim() === "2" || base64.includes("Key not work")) {
-          document.getElementById("err").style.display = "block";
+          document.getElementById('err').style.display = 'block';
           return;
         }
-
-        // Valid code → redirect to index.html
-        window.location.href = "index.html";
+        // Success! Redirect to index.html
+        window.location.href = 'index.html';
       })
       .catch(err => {
-        console.error("Request failed:", err);
-        alert("Error sending request");
+        console.error("Request error:", err);
+        alert("Failed to send request");
       });
     });
   </script>
+
 </body>
 </html>
