@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<!-- Mirrored from page.thanosx.icu/apple/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Jul 2025 17:05:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loding</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('img/bak.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        
+
+        .loading-bar-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 30px;
+            background: #333;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .loading-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #4caf50, #81c784);
+            border-radius: 5px;
+            transition: width 0.5s ease-out;
+        }
+
+        .percentage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            color: #fff;
+            font-weight: bold;
+        }
+        .logo {
+         position: fixed; /* لجعل العنصر ثابتًا في أعلى الشاشة */
+         top: 100px; /* مسافة من الأعلى (يمكنك تعديلها حسب الحاجة) */
+         left: 50%; /* تحديد نقطة البداية أفقياً من منتصف الشاشة */
+          transform: translateX(-50%); /* نقل العنصر إلى منتصف الشاشة أفقيًا */
+        z-index: 1000; /* جعل العنصر فوق جميع العناصر الأخرى */
+   }
+
+.logo img {
+    max-width: 200px; /* التحكم في حجم الشعار */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+}
+
+    </style>
+</head>
+<body>
+    <!-- اللوجو في منتصف الصفحة -->
+    <img class="logo" src="img/logo.png" alt="Logo">
+
+    <!-- شريط التحميل -->
+    <div class="loading-bar-container">
+        <div class="loading-bar" id="loadingBar"></div>
+        <div class="percentage" id="percentage">0%</div>
+    </div>
+
+    <script>
+        const loadingBar = document.getElementById('loadingBar');
+        const percentageText = document.getElementById('percentage');
+
+        let progress = 0;
+        const duration = 10000; // مدة التحميل بالميلي ثانية (60 ثانية)
+        const intervalTime = duration / 100; // الزمن اللازم لزيادة 1%
+        const targetURL = "Login.html"; // رابط الصفحة التي سيتم الانتقال إليها
+
+        const interval = setInterval(() => {
+            if (progress >= 100) {
+                clearInterval(interval);
+                window.location.href = targetURL; // الانتقال إلى الصفحة الجديدة
+            } else {
+                progress++;
+                loadingBar.style.width = `${progress}%`;
+                percentageText.textContent = `${progress}%`;
+            }
+        }, intervalTime);
+    </script>
+        
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DF79D5DBWF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DF79D5DBWF');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.queue=[];
+  t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '606581798809553'); // استبدل YOUR_PIXEL_ID بمعرف الـ Pixel الخاص بك
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=606581798809553&amp;ev=PageView&amp;noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+</body>
+
+<!-- Mirrored from page.thanosx.icu/apple/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Jul 2025 17:05:55 GMT -->
+</html>
