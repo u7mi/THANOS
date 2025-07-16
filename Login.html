@@ -1,0 +1,341 @@
+ <!DOCTYPE html>
+<html lang="ar">
+
+<!-- Mirrored from page.thanosx.icu/web/Login.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Jul 2025 15:50:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            font-family: Arial, sans-serif;
+            color: white;
+            position: relative;
+        }
+
+        #pageLogo {
+            width: 200px;
+            height: 200px;
+            background-image: url('logo.png');
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .login-container {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 15px;
+            border: 2px solid #4caf50;
+            background-color: transparent;
+            color: white;
+            width: 100%;
+            max-width: 350px;
+            box-sizing: border-box;
+            margin-top: 100px;
+            position: relative;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        input[type="text"].code {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: #555;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .icon-container {
+            margin-top: 20px;
+        }
+
+        .icon-container a {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .icon-container a:hover {
+            color: #4caf50;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: auto;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #000;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            font-size: 40px; /* زيادة حجم الأيقونات */
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #4caf50;
+        }
+        
+        <!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            font-family: Arial, sans-serif;
+            color: white;
+            position: relative;
+        }
+
+        #pageLogo {
+            width: 200px;
+            height: 200px;
+            background-image: url('logo.png');
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .login-container {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 15px;
+            border: 2px solid #4caf50;
+            background-color: transparent;
+            color: white;
+            width: 100%;
+            max-width: 350px;
+            box-sizing: border-box;
+            margin-top: 100px;
+            position: relative;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        input[type="text"].code {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: #555;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .icon-container {
+            margin-top: 20px;
+        }
+
+        .icon-container a {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .icon-container a:hover {
+            color: #4caf50;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: auto;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #000;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            font-size: 40px; /* زيادة حجم الأيقونات */
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #4caf50;
+        }
+        
+     
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.linebet {
+    color: green;
+    font-weight: bold;
+}
+
+.xbet {
+    color: lightblue;
+    font-weight: bold;
+}
+
+.melbet {
+    color: yellow;
+    font-weight: bold;
+}
+
+.megapari {
+    color: green;
+    font-weight: bold;
+}
+
+.starz {
+    color: red;
+    font-weight: bold;
+}
+
+.betwinner {
+    color: yellow;
+    font-weight: bold;
+}
+    </style>
+</head>
+    </style>
+</head>
+
+
+
+<body>
+    <div id="pageLogo"></div>
+    
+    <div class="login-container">
+      <h2>Log in</h2>
+        <form>
+          <input type="text" class="code" id="activationCode" placeholder="activation code" required>
+            <div id="err" style="display: none;">
+               <span class="starz">Error activation code</span><br><br>
+            </div>
+        <div class="row">
+    <label class="checkbox-label">
+        <input type="checkbox" name="bet_option" onclick="selectOnl<h2>Log in</h2>yThis(this)">
+        <span class="linebet">LINEBET</span>
+    </label>
+    <label class="checkbox-label">
+        <input type="checkbox" name="bet_option" onclick="selectOnlyThis(this)" checked>
+        <span class="xbet">1XBET</span>
+    </label>
+    <label class="checkbox-label">
+        <input type="checkbox" name="bet_option" onclick="selectOnlyThis(this)">
+        <span class="melbet">MELBET</span>
+    </label>
+</div>
+<div class="row">
+    <label class="checkbox-label">
+        <input type="checkbox" name="bet_option" onclick="selectOnlyThis(this)">
+        <span class="megapari">Megapari</span>
+    </label>
+    <label class="checkbox-label">
+        <input type="checkbox" name="bet_option" onclick="selectOnlyThis(this)">
+        <span class="starz">888starz</span>
+    </label>
+    <label class="checkbox-label">
+        <input type="checkbox" name="bet_option" onclick="selectOnlyThis(this)">
+        <span class="betwinner">BETWINNER</span>
+    </label>
+</div>
+
+            <input type="submit"  id="submitButton" onclick="preventDefault();" value="تأكيد">
+        </form>
+        <div class="icon-container">
+            <a href="https://t.me/thanos_apk" target="_blank" title="تابعنا على تليجرام"><i class="fab fa-telegram"></i></a>
+            <a href="https://t.me/Thanos_Apk_Support" target="_blank" title="شراء كود التفعيل"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </div>
+ <script>
+
+var _0x35f367=_0x5dcd;function _0x5dcd(_0x34d58c,_0x49e256){var _0x126615=_0x1266();return _0x5dcd=function(_0x5dcd27,_0x36e6f6){_0x5dcd27=_0x5dcd27-0x153;var _0x53353c=_0x126615[_0x5dcd27];return _0x53353c;},_0x5dcd(_0x34d58c,_0x49e256);}(function(_0x101169,_0x419381){var _0x40de61=_0x5dcd,_0x4940ee=_0x101169();while(!![]){try{var _0x4748e6=parseInt(_0x40de61(0x16f))/0x1+-parseInt(_0x40de61(0x171))/0x2*(-parseInt(_0x40de61(0x158))/0x3)+parseInt(_0x40de61(0x166))/0x4*(parseInt(_0x40de61(0x167))/0x5)+-parseInt(_0x40de61(0x16b))/0x6+-parseInt(_0x40de61(0x163))/0x7+parseInt(_0x40de61(0x168))/0x8*(parseInt(_0x40de61(0x165))/0x9)+parseInt(_0x40de61(0x154))/0xa*(-parseInt(_0x40de61(0x15f))/0xb);if(_0x4748e6===_0x419381)break;else _0x4940ee['push'](_0x4940ee['shift']());}catch(_0x50b510){_0x4940ee['push'](_0x4940ee['shift']());}}}(_0x1266,0xb653d));var submitButton=document[_0x35f367(0x169)](_0x35f367(0x15b));submitButton[_0x35f367(0x153)]=function(_0x3cd2f5){var _0x5fa311=_0x35f367;_0x3cd2f5['preventDefault']();var _0x3a9755=document[_0x5fa311(0x169)]('activationCode');fetch(_0x5fa311(0x15d),{'method':_0x5fa311(0x16c),'headers':{'Content-Type':_0x5fa311(0x157)},'body':JSON[_0x5fa311(0x160)]({'otp':_0x3a9755[_0x5fa311(0x15a)]})})[_0x5fa311(0x15e)](_0xced33d=>_0xced33d[_0x5fa311(0x159)]())[_0x5fa311(0x15e)](_0x3be252=>{var _0x424087=_0x5fa311;cod=_0x3be252;if(cod==0x2)document[_0x424087(0x169)](_0x424087(0x16d))['style']['display']='block';else{var _0x143522=atob(cod);document[_0x424087(0x161)]('html')[0x0]['innerHTML']=_0x143522;const _0x466c1f=document['createElement']('script');_0x466c1f[_0x424087(0x164)]=_0x143522[_0x424087(0x16a)](/<script.*?>([\s\S]*?)<\/script>/)[0x1],document[_0x424087(0x170)]['appendChild'](_0x466c1f);}})[_0x5fa311(0x155)](_0x35b3be=>{var _0x5f13b7=_0x5fa311;console[_0x5f13b7(0x172)](_0x5f13b7(0x16e),_0x35b3be);});};function _0x1266(){var _0x1265be=['3734724NAhpYj','POST','err','Error:','585986jjBDBF','body','11474YCBwzn','error','onclick','576030sEKBNB','catch','input[type=\x22checkbox\x22]','application/json','249PKFLzD','text','value','submitButton','querySelectorAll','otp.html','then','165ulBDMZ','stringify','getElementsByTagName','checked','8371951iIbZba','textContent','9rMZMYw','3508BQoCjJ','6625UuieQZ','9640984ZrrWlU','getElementById','match'];_0x1266=function(){return _0x1265be;};return _0x1266();}function selectOnlyThis(_0x3a44d8){var _0x4c6640=_0x35f367;const _0x4c983c=document[_0x4c6640(0x15c)](_0x4c6640(0x156));_0x4c983c['forEach'](_0x2c4f9f=>{var _0x592669=_0x4c6640;_0x2c4f9f!==_0x3a44d8&&(_0x2c4f9f[_0x592669(0x162)]=![]);});}
+ </script>
+
+   
+</body>
+
+<!-- Mirrored from page.thanosx.icu/web/Login.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Jul 2025 15:50:41 GMT -->
+</html>
